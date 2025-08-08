@@ -54,14 +54,72 @@
             <div class="grupo-radio">
                 <input type="radio" id="profissional" name="tipi_inscriçao" value="profissiona" required>
                 <label for="profissional">Profissional</label>
-      
-
-
             </div>
-            
+
+            <div class="campo">
+                <label >Areas de interesse (Pode marca varias)</label>
+                <div class="grupo-checkbox">
+                    <input type="checkbox" id="ia" name="areas_interesse" value="ia">
+                    <label for="tecnologia">Tecnologia</label>
+                </div>    
+                <div>
+                    <input type="checkbox" id="ia" name="areas_interesse" value="ia">
+                    <label for="inovacao">Inovação</label>
+                </div>
+                    <input type="checkbox" id="ia" name="areas_interesse" value="ia">
+                    <label for="negocios">Negócios</label>
+                <div>
+                    <input type="checkbox" id="ia" name="areas_interesse" value="ia">
+                    <label for="saude">Saúde</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="ia" name="areas_interesse" value="ia">
+                    <label for="educacao">Educação</label>
+                 </div>   
+
+                
+            </div>    
+
+            <div class="campo">
+            <label for="nivel de experiencia">Seu nivel de experiencia (0 a 10 )</label>
+            <input type="range" id="nivel_experiencia" name="nivel_experiencia" min="0" max="10" required>
+            <output id="nivel_experiencia_output">5</output>
+        </div>
+            <script>
+                const nivelExperiencia = document.getElementById('nivel_experiencia');
+                const nivelExperienciaOutput = document.getElementById('nivel_experiencia_output');
+
+                nivelExperiencia.addEventListener('input', function() {
+                    nivelExperienciaOutput.value = this.value;
+                }); 
+            </script>
+            <div class="campo">
+                <label for="palestra">Qaul palestra te interessa?</label>
+                <input list="sugestao-palestras" ide="palestra" name="palestra" required>
+                <datalist id="sugestao-palestras">
+                    <option value="O futuro da IA">
+                    <option value="Inovações em Tecnologia Verde">
+                    <option value="Transformação Digital nas Empresas">
+                    <option value="Saúde e Tecnologia: O que vem por aí?">
+                    <option value="Educação do Futuro: Tendências e Desafios">
+                </datalist>
+            </div>
           
         </fieldset>
-        
+        <fieldset>
+            <legend>Extras</legend>
+            <div class="campo">
+                <label for="cor=cracha">Cor do cracha</label>
+                <input type="color" id="cor-cracha" name="cor-cracha" value="#ff0000" required>
+            </div>
+            <div class="campo">
+                <label for="comprovante">Anexar comprovante de estudante</label>
+                <input type="file" id="comprovante" name="comprovante" accept=".pdf,.jpg,.png">
+
+            </div>
+        </fieldset>
+        <button type="submit" class="botao">Enviar Inscriçao</button>    
+
      </form>
 </div>
     

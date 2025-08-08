@@ -17,6 +17,7 @@ body {
     overflow: hidden;
     padding: 0 20px;
     
+    
 }
 .formulario-cabecalho {
     background-color: rgb(89, 42, 133);
@@ -74,4 +75,73 @@ fieldset {
     margin-bottom: 10px;
     font-weight: bold;
     color: #555;
+}
+.grupo-checkbox {
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 20px;
+    gap: 10px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[list],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+input:focus {
+    border-color: #aa38a1;
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 90, 205, 0.5);
+}
+.grupo-checkbox, .grupo-radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.grupo-checkbox input, .grupo-radio input {
+    margin-right: 10px;
+}
+.grupo-checkbox input, .grupo-radio label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+input[type="submit"] {
+    background-color: #641260;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+button {
+    background-color: #641260;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    flex: 1;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
